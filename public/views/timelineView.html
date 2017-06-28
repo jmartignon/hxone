@@ -1,0 +1,25 @@
+<div id="start"
+    data-role="view"
+    data-title="TimeLine"
+    data-model="app.timeLineViewViewModel"
+    data-bind="events: { show: onViewShow }"
+    style="display:none;">
+
+    <header data-role="header">
+        <div data-role="navbar">
+            <a href="#views/home.html" data-role="button" data-icon="back" data-align="left">Back</a>
+
+            <div class="navbar-title">TimeLine</div>
+
+            <a data-role="button" data-align="right" href="#views/login.html">
+                <span data-bind="style: { backgroundImage: user.userPic }" class="user-pic"></span>
+                <span data-bind="text: user.shortName" class="user-name" style="font-size: .9em; position: relative; top: -14px;"></span>
+            </a>
+        </div>
+    </header>
+
+    <div>
+        <div id='timeline-embed' style="width: 100%; height: 500px"></div>
+    </div>
+
+</div>

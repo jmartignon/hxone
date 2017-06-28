@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="UTF-8">
+    <title>HxOne Test</title>
+    <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/2.1.1/firebaseui.css" />
+    <script src="https://www.gstatic.com/firebasejs/4.1.2/firebase.js"></script>
+    <script src="https://cdn.firebase.com/libs/firebaseui/2.1.1/firebaseui.js"></script>
+  </head>
+
+  <body>
+    <h2>HxOne Test</h2>
+    <div id="inputform" style="display: none;">
+        <input type="text" id="nameInput" placeholder="Enter patient name here...">
+        <button type="button" onclick="savePatient()">Save Data</button>
+    </div>
+    
+    <div id="loginform" style="display: none;">
+        <div id="firebaseui-auth-container"></div>
+    </div>
+
+    <br><br><br>
+    <hr>
+    <h2>Results</h2>
+    <textarea rows="10" cols="50" id="results"></textarea>
+
+    <script>
+
+        var config = {
+            apiKey: "AIzaSyCfniZHaoHeCXzEUW8IJiXqCHMs2mapO8k",
+            authDomain: "hxone-241be.firebaseapp.com",
+            databaseURL: "https://hxone-241be.firebaseio.com",
+            projectId: "hxone-241be",
+            storageBucket: "hxone-241be.appspot.com",
+            messagingSenderId: "227584599818"
+        };
+        firebase.initializeApp(config);
+
+        // FirebaseUI config.
+        var uiConfig = {
+            signInSuccessUrl: 'test.html',
+            signInOptions: [
+                firebase.auth.GoogleAuthProvider.PROVIDER_ID
+            ],
+            // Terms of service url.
+            tosUrl: 'https://hxone-241be.firebaseapp.com'
+        };
+
+        // Initialize the FirebaseUI Widget using Firebase.
+        var ui = new firebaseui.auth.AuthUI(firebase.auth());
+        // The start method will wait until the DOM is loaded.
+        ui.start('#firebaseui-auth-container', uiConfig);
+
+        firebase.auth().onAuthStateChanged(firebaseUser => {
+            var inputformElement = document.getElementById('inputform'),
+                loginformElement = document.getElementById('loginform');
+
+            if(firebaseUser) {
+                console.log('Logged In');
+                inputformElement.style.display = "";
+                loginformElement.style.display = "none";
+            } else {
+                inputformElement.style.display = "none";
+                loginformElement.style.display = "";
+            }
+        });
+
+        function getPatient(pId) {
+            var patientRef = firebase.database().ref().child('patients').child(pId);
+
+            patientRef.on('value', snap => {
+                var patient = snap.val(),
+                    patientResult = document.getElementById('results');
+
+                if (patient != undefined)
+                    patientResult.value += '\n' + patient.name;
+            });
+        }
+
+        function savePatient() {
+            var updates = {},
+                nameField = document.getElementById('nameInput'),
+                key = firebase.database().ref().child('patients').push().key;
+
+            updates['patients/' + key] = { name: nameField.value };
+            firebase.database().ref().update(updates,  
+                function(error) {              
+                    nameField.value = "";
+
+                    if (error) {
+                        console.log('Synchronization failed');
+                    } else {
+                        console.log('Synchronization succeeded');
+                        getPatient(key);
+                    }
+                });
+        }
+
+    </script>
+  </body>
+</html>

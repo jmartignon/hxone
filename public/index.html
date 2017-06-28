@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>HxOne</title>
+        <meta charset="UTF-8">
+        <meta name="msapplication-tap-highlight" content="no" />
+
+        <link href="styles/pure-min.css" rel="stylesheet" />
+        <link href="styles/toastr.min.css" rel="stylesheet" />
+       
+        <link rel="stylesheet" href="kendo/styles/kendo.common.min.css" />
+        <link rel="stylesheet" href="kendo/styles/kendo.mobile.all.min.css" />
+        <link rel="stylesheet" href="kendo/styles/kendo.flat.min.css" />
+        <link rel="stylesheet" href="kendo/styles/kendo.flat.mobile.min.css" />
+        <link rel="stylesheet" href="styles/kendo.mobile.blue.css" />
+        <link rel="stylesheet" href="styles/app.css" />
+
+        <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/2.1.1/firebaseui.css" />
+        <script src="https://www.gstatic.com/firebasejs/4.1.2/firebase.js"></script>
+<!--
+    <script src="/__/firebase/4.1.2/firebase.js"></script>
+-->
+        <script src="https://cdn.firebase.com/libs/firebaseui/2.1.1/firebaseui.js"></script>
+
+        <script src="kendo/js/jquery.min.js"></script>
+        <script src="kendo/js/kendo.all.min.js"></script>
+
+        <link title="timeline-styles" rel="stylesheet" href="styles/timeline.css">
+        <script src="scripts/timeline.js"></script>
+
+        <script src="scripts/moment.min.js"></script>
+        <script src="scripts/toastr.min.js"></script>
+        <script src="scripts/pubsub.js"></script>
+
+        <script src="scripts/globals.js"></script>
+        <script src="viewmodels/index.js"></script>
+        <script src="viewmodels/settings.js"></script>
+        <script src="viewmodels/home.js"></script>
+        <script src="viewmodels/login.js"></script>
+        <script src="viewmodels/createPatient.js"></script>
+        <script src="viewmodels/timelineView.js"></script>
+
+        <script src="scripts/app.js"></script>
+        <script src="scripts/firebasecontext.js"></script>
+        <script src="scripts/datacontext.js"></script>
+    </head>
+
+
+    <body>
+       <div data-role="layout" data-id="main">
+            <!-- application views will be rendered here -->
+        </div>
+        
+        <div id="appDrawer"
+             data-role="drawer"
+              data-model="app.indexViewModel"
+              data-title="Settings"
+               data-swipe-to-open="false">
+            
+            <div data-role="header">
+                <div data-role="navbar">
+                    <span data-role="view-title">Settings</span>
+                </div>
+            </div>
+                    
+            <div style="padding: .5em;">
+                <ul data-role="listview">
+                    <li>
+                        <a href="views/timelineView.html">
+                            TimeLine
+                        </a>
+                    </li>
+                </ul>
+            </div>  
+            
+            <div data-role="footer">
+                <ul data-role="listview">
+                    <li>
+                        <a href="views/settings.html">
+                            Settings
+                        </a>
+                    </li>
+                    <li class="km-footer right" style="font-size: .75em">
+                        <div>
+                            <div style="float: right;">version: <span class="header" data-bind="text: version"></span></div>
+                        </div>
+                    </li>
+                </ul>       
+            </div>
+         </div>       
+     </body>
+
+</html>

@@ -1,0 +1,31 @@
+<div id="login"
+    data-role="view"
+    data-title="Login"
+    data-model="app.loginViewModel"
+    data-bind="events: { show: onViewShow }"
+    style="display:none;">
+
+    <header data-role="header">
+        <div data-role="navbar">
+            <a data-role="button" data-rel="drawer" href="#appDrawer" data-icon="drawer-icon" data-align="left"></a>
+
+            <div class="navbar-title">Login</div>
+        </div>
+    </header>
+
+    <div>
+        <div data-bind="visible: isLoggedIn" style="display: none; padding: 1.5em; text-align: center">
+            Currently logged in: <span style="font-weight: bold;" data-bind="text: user.displayName"></span>
+
+            <div>
+                <a data-bind="click: logOut" type="button" data-role="button">Logout</a>
+            </div>
+        </div>
+        <div data-bind="invisible: isLoggedIn" style="display: none; padding: 1.5em; text-align: center">
+            <div id="firebaseui-auth-container"></div>
+        </div>
+
+
+    </div>
+</div>
+

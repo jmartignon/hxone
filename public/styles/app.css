@@ -1,0 +1,284 @@
+/* Global */
+@media only screen and (min-width : 320px) {
+    div.container {
+        padding: .3em;
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+    }
+    
+    #appDrawer {
+        width: 80%;
+    }
+    
+    .km-on-wp.km-app #appDrawer {
+        width: 80%;
+    } 
+}
+
+@media only screen and (min-width : 480px) {
+    div.container {
+        padding: .3em;
+        margin-left: auto;
+        margin-right: auto;
+        padding: .3em;
+        width: 95%;
+    }
+    
+    #appDrawer {
+        width: 60%;
+    }
+    
+    .km-on-wp.km-app #appDrawer {
+        width: 80%;
+    } 
+}
+
+@media only screen and (min-width : 768px) {
+    div.container {
+        padding: .3em;
+        margin-left: auto;
+        margin-right: auto;
+        padding: .3em;
+        width: 75%;
+    }
+    
+    #appDrawer {
+        width: 40%;
+    }
+    
+    .km-on-wp.km-app #appDrawer {
+        width: 60%;
+    } 
+}
+
+@media only screen and (min-width : 992px) {
+    div.container {
+        padding: .3em;
+        margin-left: auto;
+        margin-right: auto;
+        padding: .3em;
+        width: 75%;
+    }
+
+    
+    #appDrawer {
+        width: 40%;
+    }
+    
+    .km-on-wp.km-app #appDrawer {
+        width: 60%;
+    } 
+}
+
+@media only screen and (min-width : 1200px) {
+    div.container {
+        padding: .3em;
+        margin-left: auto;
+        margin-right: auto;
+        padding: .3em;
+        width: 50%;        
+    }
+    
+    #appDrawer {
+        width: 30%;
+    }
+    
+    .km-on-wp.km-app #appDrawer {
+        width: 60%;
+    } 
+}
+
+.left {
+    text-align: left;
+} 
+
+.center {
+    text-align: center;
+} 
+
+.right {
+    text-align: right;
+} 
+
+input, select, textarea {
+    width: 99%;
+    height: 3em;
+}
+
+.pure-g > div {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.f-pad {
+    padding: .25em;
+}
+.l-pad {
+    padding: .45em;
+}
+
+/* Buttons */
+.km-icon:after,
+.km-icon:before {
+    font-size: 1.25em;
+    font-weight: bolder;
+}
+.km-flat .km-scroller-pull .km-icon:after {
+    content: "\e012";
+    margin-left: 0px;
+    font-size: .75em;
+}
+.km-medtwist:after,
+.km-medtwist:before {
+    content: "\e082";
+}
+.km-config:after,
+.km-config:before
+{
+/*    top: 3px; Used in cordova version */
+    top: 1px; /* Used in web version */
+    content: "\e0f1";
+}
+.km-back:after,
+.km-back:before
+{
+    content: "\e013";
+    top: -.1em;
+    left: -.5em;
+}
+.km-add:after,
+.km-add:before
+{
+    content: "\e0cb";
+}
+.km-create:after,
+.km-create:before
+{
+    content: "\e039";
+}
+.km-save:after,
+.km-save:before
+{
+    content: "\e037";
+    font-weight: bolder;
+}
+.km-cog:after,
+.km-cog:before
+{
+    content: "\e0a4";
+}
+.km-accept:after,
+.km-accept:before
+{
+    content: "\e030";
+}
+.km-reject:after,
+.km-reject:before
+{
+    content: "\e031";
+}
+.km-roundup:after,
+.km-roundup:before
+{
+    content: "\e001";
+    top: .1em;
+}
+.km-rounddown:after,
+.km-rounddown:before
+{
+    content: "\e002";
+    top: -.25em;
+}
+.km-lock:after,
+.km-lock:before
+{
+    content: "\e0ff";
+}
+.km-chart:after,
+.km-chart:before
+{
+    content: "\e050";
+}
+
+/* Kendo Web App additional overrides */
+.k-autocomplete.k-state-default, .k-dropdown-wrap.k-state-default, .k-numeric-wrap.k-state-default, .k-picker-wrap.k-state-default, .k-picker-wrap.k-state-default.k-state-hover {
+    background-color: white;
+    border-color: white;
+    width: 100%;
+}
+.k-picker-wrap .k-input, .k-picker-wrap .k-select {
+    height: 3em;
+    border: 0;
+}
+.k-combobox .k-dropdown-wrap:before, .k-numeric-wrap:before, .k-picker-wrap:before {
+     content: none;
+}
+
+
+/* Kendo Mobile additional overrides */
+.km-listview-link::after {
+    display: none;
+}
+
+.km-flat .km-view .km-navbar .km-button .km-text {
+    font-size: 1.3em;
+}
+
+/* Flat styling */
+.km-group-title {
+    padding: .5em 0em;
+}
+
+/* Other Styling */
+.navbar-title-left{
+    text-align: left;
+    padding-left: .5em;
+}
+
+.panel-outer {
+    border: 1px solid #CCCCCC;
+}
+.panel-heading {
+    padding: .25em;
+    font-size: 1.25em;
+    background-color: #CCCCCC;
+    text-align: left;
+}
+
+.vertical-section-left {
+    border-left: .75em solid #CCCCCC;
+}
+
+.toast-bottom-right {
+    bottom: 80px;
+}
+
+.card-header {
+    font-size: 1.25em;
+}
+
+.card {
+    /* Add shadows to create the "card" effect */
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    padding: .2em;
+}
+
+/* On mouse-over, add a deeper shadow */
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+/* User display */
+.user-pic {
+    position: relative;
+    top: -3px;
+    display: inline-block;
+    background-image: url('/images/profile_placeholder.png');
+    background-repeat: no-repeat;
+    width: 36px;
+    height: 36px;
+    background-size: 36px;
+    border-radius: 20px;
+}

@@ -1,0 +1,231 @@
+/* colors: 
+black: #4f4f4f;
+black-darker: #000000;
+blue: rgb(220, 239, 255);
+blue-med: rgb(0,119,220);
+blue-darker: rgb(24,152,255);
+blue-darkest: rgb(0, 100, 181);
+blue-evendarker: rgb(0,35,63);
+white: rgb(255, 255, 255);
+*/
+
+.chartColor1 {
+    background-color: rgb(220, 239, 255);
+}
+.chartColor2 {
+    background-color: rgb(24,152,255);
+}
+.chartColor3 {
+    background-color: rgb(0, 100, 181);
+}
+
+.km-flat .km-view .km-content,
+.km-footer, .km-flat .km-footer, .km-flat .km-footer .km-list > li.km-footer {
+    font-family: Roboto, HelveticaNeue, sans-serif;
+    text-shadow: rgb(0, 0, 0) 0px 0px 0px;
+    background-color: rgb(255, 255, 255);
+    background-image: -webkit-gradient(linear,50% 0,50% 100%,color-stop(0, rgba(255,255,255,.4)),color-stop(1, rgba(255,255,255,.6)));
+    background-image: -moz-linear-gradient(50% 0,50% 100%,rgba(255,255,255,.4),rgba(255,255,255,.6));
+    background-image: -ms-linear-gradient(50% 0,50% 100%,rgba(255,255,255,.4),rgba(255,255,255,.6));
+    background-repeat-x: repeat;
+    background-repeat-y: repeat;
+    background-position-x: 0px;
+    background-position-y: 0px;
+}
+.km-flat .km-view .km-content .km-button {
+    background-color: rgb(255, 255, 255);
+}
+.km-flat .km-view .km-content .km-button.km-state-active {
+    background-color: rgb(0, 100, 181);
+}
+.km-flat .km-view .km-content .km-button.selected-button {
+    color: #fff;
+    background-color: rgb(0, 100, 181);
+}
+.km-flat .km-view .km-content .km-button.selected-button.km-state-active {
+    background-color: #fff;
+    color: #000;
+}
+.km-flat .km-view .km-content .km-button.alt-button {
+    color: #fff;
+    background-color: rgb(24,152,255);
+}
+.km-flat .km-view .km-content .km-button.alt-button.km-state-active {
+    background-color: #fff;
+    color: #000;
+}
+
+.km-flat .km-switch-handle, .km-flat .k-slider-selection, .km-flat .km-switch-background {
+    color: rgb(0, 100, 181);
+}
+
+.km-flat .km-list > li, 
+.km-flat .km-view .km-content .km-list > li {
+    background-color: rgb(240,248,255);
+    background-image: -webkit-gradient(linear,50% 0,50% 100%,color-stop(0, rgba(255,255,255,.6)),color-stop(.5, rgba(255,255,255,.35)),color-stop(.5, rgba(255,255,255,.4)),color-stop(1, rgba(255,255,255,.6)));
+    background-image: -moz-linear-gradient(50% 0,50% 100%,rgba(255,255,255,.6),rgba(255,255,255,.35) 50%,rgba(255,255,255,.4) 50%,rgba(255,255,255,.6));
+    background-image: -ms-linear-gradient(50% 0,50% 100%,rgba(255,255,255,.6),rgba(255,255,255,.35) 50%,rgba(255,255,255,.4) 50%,rgba(255,255,255,.6));
+    background-repeat-x: repeat;
+    background-repeat-y: repeat;
+    background-position-x: 0px;
+    background-position-y: 0px;
+}
+.km-flat .km-list > li.km-state-active, 
+.km-flat .km-view .km-content .km-list > li.km-state-active,
+.km-flat .km-list > li.km-state-active > .km-listview-link, 
+.km-flat .km-view .km-content .km-list > li.km-state-active > .km-listview-link,
+.km-flat .km-actionsheet > li > a:hover  {
+    background-color: rgb(201,231,255);
+    color: #4c5356;
+}
+
+.km-flat .km-view .km-content .km-listgroup .km-group-title .km-text {
+    color: rgb(0, 100, 181);
+}
+.km-flat .km-view .km-content .km-listgroupinset .km-group-title {
+    color: rgb(255, 255, 255);
+}
+.km-flat .km-view .km-content .km-listgroupinset .km-group-title .km-text {
+    color: rgb(0, 16, 165);
+}
+.km-flat .km-view .km-content .km-scrollview {
+    background-color: rgb(255, 255, 255);
+}
+
+.km-flat .km-view .km-content .km-list > li .km-switch .km-switch-container {
+    background-color: rgb(0, 100, 181);
+}
+.km-flat .km-scroller-pull, .km-flat .km-touch-scrollbar, .km-flat .km-scroller-pull, 
+.km-flat .km-loader:before, .km-flat .km-scroller-pull:before, .km-flat .km-touch-scrollbar:before, .km-flat .km-scroller-pull {
+    background-color: rgb(0, 100, 181);
+}
+
+.km-flat .km-loader {
+    background-repeat-x: initial;
+    background-repeat-y: initial;
+    background-attachment: initial;
+    background-position-x: initial;
+    background-position-y: initial;
+    background-origin: initial;
+    background-clip: initial;
+    background:rgba(255,255,255,0.80);
+    background-size: initial;
+    background-image: none;
+}
+
+/* navbar changes */
+
+
+/*.km-flat .km-view .km-navbar {
+    background-color: rgb(0, 100, 181);
+    -webkit-box-shadow: 0 2px 4px #333;
+    box-shadow: 0 2px 4px #333;
+}*/
+.km-flat .km-view .km-navbar {
+    background-color: rgb(0, 100, 181);
+    background-image: -webkit-gradient(linear,50% 0,50% 100%,color-stop(0, rgba(0,0,0,.2)),color-stop(.5, rgba(0,0,0,.4)),color-stop(.5, rgba(0,0,0,.45)),color-stop(1, rgba(0,0,0,.4)));
+    background-image: -moz-linear-gradient(50% 0,50% 100%,rgba(0,0,0,.2),rgba(0,0,0,.4) 50%,rgba(0,0,0,.45) 50%,rgba(0,0,0,.4));
+    background-image: -ms-linear-gradient(50% 0,50% 100%,rgba(0,0,0,.2),rgba(0,0,0,.4) 50%,rgba(0,0,0,.45) 50%,rgba(0,0,0,.4));
+    background-repeat-x: repeat;
+    background-repeat-y: repeat;
+    background-position-x: 0px;
+    background-position-y: 0px;
+}
+.km-flat .km-navbar {
+    color: rgb(255, 255, 255);
+}
+.km-flat .km-navbar .km-button {
+    background-color: transparent;
+    border: 0 none; 
+    font-size: 1.2em;
+    margin: 0;
+}
+.km-flat .km-navbar .km-button.alt-button {
+    color: rgb(220, 239, 255);
+    border: 0 none; 
+    font-size: 1.2em;
+    margin: 0;
+}
+.km-flat .km-navbar .km-button.km-state-active {
+    color: rgb(0, 16, 165);
+}
+
+.km-flat .km-view .km-navbar .km-button .km-text {
+    color: rgb(220, 239, 255);
+}
+
+/********* Drawer styling ************/
+#appDrawer, #appDrawer .km-content, #appDrawer .km-footer, #appDrawer .km-list > li, #appDrawer .km-view .km-content .km-list > li {
+    background-color: rgb(201,231,255);
+    background-image: none;
+}
+#appDrawer .km-list > li.km-state-active, 
+#appDrawer .km-view .km-content .km-list > li.km-state-active,
+#appDrawer .km-list > li.km-state-active > .km-listview-link, 
+#appDrawer .km-view .km-content .km-list > li.km-state-active > .km-listview-link,
+#appDrawer .km-actionsheet > li > a:hover  {
+    background-color: rgb(0,119,220);
+    color: white;
+}
+
+.km-flat .km-listview-label input[type=radio]:checked,
+.km-flat .km-listview-label input[type=checkbox]:checked {
+    background-color: rgb(0,119,220);
+}
+.km-flat .km-listview li.km-state-active .km-listview-label {
+    background-color: rgb(201,231,255);
+}
+
+/***************** CUSTOM **********************/
+label, .label, .pure-form label, .pure-form-stacked label {
+    color: rgb(0,35,63);
+}
+
+input, .pure-form input, .pure-form-stacked input,
+input[type=text], .pure-form input[type=text], .pure-form-stacked input[type=text],
+input[type=number], .pure-form input[type=number], .pure-form-stacked input[type=number],
+input[type=date], .pure-form input[type=date], .pure-form-stacked input[type=date],
+input[type=time], .pure-form input[type=time], .pure-form-stacked input[type=time],
+input[type=password], .pure-form input[type=password], .pure-form-stacked input[type=password],
+textarea, .pure-form textarea, .pure-form-stacked textarea,
+select, .pure-form select, .pure-form-stacked select {
+    color: #000000;
+    background-color: transparent;
+}
+
+.toast-info{
+    background-color: rgb(0, 100, 181);
+}
+
+/** Floating Action Button **/
+.fabbtn {
+    background-color: rgb(0,119,220);
+}
+
+.calculatedValue {
+    color: rgb( 0, 100, 181); 
+}
+.calculatedWarning {
+    color: #F54D4E; 
+}
+
+.header {
+    color: rgb(0, 100, 181);
+}
+
+.panel-outer {
+    border-color: rgb(220, 239, 255);
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 3px;
+}
+.panel-heading {
+    background-color: rgb(220,239,255);
+}
+
+.vertical-section-left {
+    border-color: rgb(201,231,255);
+}
+
+
+

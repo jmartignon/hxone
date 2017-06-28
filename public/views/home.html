@@ -1,0 +1,55 @@
+<div id="home"
+    data-role="view"
+    data-title="Home"
+    data-model="app.homeViewModel"
+    data-bind="events: { show: onViewShow }"
+    style="display:none;">
+
+    <header data-role="header">
+        <div data-role="navbar">
+            <a data-role="button" data-rel="drawer" href="#appDrawer" data-icon="drawer-icon" data-align="left"></a>
+
+            <div class="navbar-title">Hx One</div>
+
+            <a data-role="button" data-align="right" href="#views/login.html">
+                <span data-bind="style: { backgroundImage: user.userPic }" class="user-pic"></span>
+                <span data-bind="text: user.shortName" class="user-name" style="font-size: .9em; position: relative; top: -14px;"></span>
+            </a>
+
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="pure-g">
+            <div class="pure-u-1 center">
+                <h2>Welcome to Hx - Health Execution</h2>
+            </div>
+
+            <div class="pure-u-2-5" data-bind="visible: isLoggedIn">
+                <div class="card">
+                    <div class="card-header">Patient</div>
+                    <div style="padding-top: .5em;">
+                        <div>Name: <span data-bind="text: patient.name"></span></div>
+                        <div>Gender: <span data-bind="text: patient.gender"></span></div>
+                        <div>Birth Date: <span data-bind="text: patient.startdateDisplay"></span></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pure-u-1-5">
+                <!-- spacer -->
+            </div>
+
+            <div class="pure-u-2-5" data-bind="visible: isLoggedIn">
+                <div class="card">
+                    <div class="card-header">Suggestions</div>
+                    <ul>
+                        <li>Suggestion 1</li>
+                        <li>Suggestion 2</li>
+                        <li>Suggestion 3</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
