@@ -25,7 +25,8 @@ app.dataContext = (function () {
 
             patientRef = firebase.database().ref().child('patients').child(patientId);
 
-            patientRef.on('value', snap => {
+            //patientRef.on('value', snap => {
+            patientRef.on('value', function(snap) {
                 pubsub.publish('data.patient', snap.val());                    
             });
         },

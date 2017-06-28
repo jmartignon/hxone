@@ -1,7 +1,7 @@
 (function (global) {
     var app = global.app = global.app || {};
     
-    app.version = "HxOne.1.02";
+    app.version = "HxOne.1.03";
     app.cordova = false;
             
     $(document).ready(function() {

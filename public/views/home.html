@@ -23,15 +23,18 @@
         <div class="pure-g">
             <div class="pure-u-1 center">
                 <h2>Welcome to Hx - Health Execution</h2>
+                <div data-bind="invisible: isLoggedIn" style="display: none; padding: 1.5em; text-align: center">
+                    <a href="#views/login.html" type="button" data-role="button">Login</a>
+                </div>
             </div>
 
             <div class="pure-u-2-5" data-bind="visible: isLoggedIn">
                 <div class="card">
                     <div class="card-header">Patient</div>
                     <div style="padding-top: .5em;">
-                        <div>Name: <span data-bind="text: patient.name"></span></div>
-                        <div>Gender: <span data-bind="text: patient.gender"></span></div>
-                        <div>Birth Date: <span data-bind="text: patient.startdateDisplay"></span></div>
+                        <div>Name: <span data-bind="text: patient.name" style="font-weight: bold;"></span></div>
+                        <div>Gender: <span data-bind="text: patient.gender" style="font-weight: bold;"></span></div>
+                        <div>Birth Date: <span data-bind="text: patient.startdateDisplay" style="font-weight: bold;"></span></div>
                     </div>
                 </div>
             </div>

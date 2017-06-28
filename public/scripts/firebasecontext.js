@@ -9,7 +9,8 @@ var config = {
 };
 firebase.initializeApp(config);
 
-firebase.auth().onAuthStateChanged(firebaseUser => {
+//firebase.auth().onAuthStateChanged(firebaseUser => {
+firebase.auth().onAuthStateChanged(function(firebaseUser) {
     var user = {
         id: "",
         displayName: "",
