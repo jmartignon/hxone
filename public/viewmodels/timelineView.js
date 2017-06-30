@@ -24,11 +24,13 @@
                             hash_bookmark: false,
                             debug: true,
                             timenav_height_percentage: 60,
-                            scale_factor: 1
+                            scale_factor: .5
                         };
             
                 if( !jQuery.isEmptyObject(that.patient) ) {
                     new TL.Timeline('timeline-embed', that.patient.timeline, options);
+                } else {
+                    app.application.navigate("#views/home.html");
                 }
             },
         });

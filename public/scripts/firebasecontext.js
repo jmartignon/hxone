@@ -20,10 +20,11 @@ firebase.auth().onAuthStateChanged(function(firebaseUser) {
 
     if(firebaseUser) {
         user.id = firebaseUser.uid;
-        user.displayName = firebaseUser.displayName; 
-        user.shortName = firebaseUser.displayName.split(' ')[0];
-        user.userPic = 'url(' + firebaseUser.photoURL + ')';
+        user.displayName = getDisplayName(firebaseUser); 
+        user.shortName = getDisplayName(firebaseUser, true);
+        user.userPic = (firebaseUser.photoURL ? 'url(' + firebaseUser.photoURL + ')' : "");
         pubsub.publish("user", user);
+
         notify(user.displayName + " logged in", "success");
         
         var pid = localStorage.getItem(user.id + "-patientid");
@@ -37,3 +38,17 @@ firebase.auth().onAuthStateChanged(function(firebaseUser) {
         pubsub.publish("user", {});
     }
 });
+
+function getDisplayName(firebaseUser, short) {
+    var name = firebaseUser.displayName;
+    
+    if( firebaseUser.displayName ) {
+        name = (short ? name.split(' ')[0] : name);
+    } else {
+        if( firebaseUser.phoneNumber ) {
+            name = firebaseUser.phoneNumber.replace('+1', "");
+        }
+    }
+
+    return name;
+}
